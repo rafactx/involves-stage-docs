@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import AnimatedBackground from './AnimatedBackground';
 import Footer from './Footer';
@@ -165,9 +164,12 @@ export default function HeroEnhanced() {
                   variant="ghostInverse"
                   className="!px-8 !py-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 gradient-animated"
                 >
-                  <Link href="/docs" prefetch>
-                    Documentação
-                  </Link>
+<a
+  href="/docs"
+  className="text-sm font-medium transition-colors hover:text-foreground text-muted-foreground"
+>
+  Documentação
+</a>
                 </Button>
               </motion.div>
             </motion.div>
