@@ -1,0 +1,47 @@
+---
+title: Visão Geral
+description: Boas práticas para se conectar com segurança à API do Involves Stage.
+---
+
+import { Callout } from &apos;zudoku/ui/Callout&apos;;
+import { Card, CardContent, CardHeader, CardTitle } from &apos;zudoku/ui/Card&apos;;
+import { Button } from &apos;zudoku/ui/Button&apos;;
+import { AspectRatio } from &apos;zudoku/ui/AspectRatio&apos;;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from &apos;zudoku/ui/Tabs&apos;;
+import { Badge } from &apos;zudoku/ui/Badge&apos;;
+
+## 🚀 Introdução
+
+A API do **Involves Stage** permite integrar facilmente sistemas externos, automatizando processos e simplificando suas operações.<br /&gt;
+Desenvolvida seguindo os princípios REST, nossa API é intuitiva, fácil de usar, e totalmente compatível com clientes HTTP comuns, sem necessidade de desenvolvimento especial.
+
+A URL base para todas as requisições é:
+
+```
+https://exemplo.involves.com/webservices/api/v3
+```
+
+<Callout type="tip" title="Dica" className="text-sm leading-relaxed"&gt;
+  Nunca faça testes diretamente no ambiente de produção.
+  <br /&gt;
+  Crie um ambiente específico (sandbox) com usuários exclusivos para testes.
+  <br /&gt;
+  Se precisar de ajuda para configurar,{&apos; &apos;}
+  <a
+    href="https://help.involves.com/hc/pt-br/requests/new"
+    target="_blank"
+    rel="noopener"
+    className="underline text-green-600 dark:text-green-400"
+  &gt;
+    abra um ticket com o Suporte
+  </a&gt;
+  .
+</Callout&gt;
+
+---
+
+## 📚 Sobre esta documentação
+
+Esta documentação é mantida em sincronia com a versão mais recente da API do Involves Stage.<br /&gt;
+No entanto, pequenas diferenças podem ocorrer caso sua instância esteja em uma versão anterior.
+Sempre que possível, verifique o cabeçalho de versão (Accept-Version) ou consulte o suporte em caso de dúvidas.

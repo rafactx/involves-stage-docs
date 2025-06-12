@@ -1,26 +1,30 @@
 {
-  "name": "involves-stage-docs",
-  "version": "0.1.0",
-  "type": "module",
+  "name": "involves-stage-monorepo",
   "private": true,
-  "scripts": {
-    "dev": "zudoku dev",
-    "build": "zudoku build",
-    "preview": "zudoku preview",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "react": ">=19.0.0",
-    "react-dom": ">=19.0.0",
-    "zudoku": "0.47.1"
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "typescript": "^5",
-    "eslint": "^8",
-    "@typescript-eslint/eslint-plugin": "^8",
-    "@typescript-eslint/parser": "^8"
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-mdx": "^3.4.2",
+    "eslint-plugin-mdx": "^3.4.2",
+    "eslint-plugin-prettier": "^5.4.1",
+    "glob": "^11.0.2",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:mdx": "eslint . --ext .mdx",
+    "format:check": "prettier . --check",
+    "format": "prettier . --write",
+    "check": "pnpm lint && pnpm format:check",
+    "fix": "pnpm lint --fix && pnpm format"
   }
 }
