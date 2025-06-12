@@ -4,6 +4,8 @@
   🇫🇷 <a href="./README.fr.md">Français</a>
 </p>
 
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 # 🧩 Involves Stage Docs · Monorepo
 
 Unified repository containing:

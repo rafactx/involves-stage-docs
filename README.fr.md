@@ -4,6 +4,8 @@
   🇪🇸 <a href="./README.es.md">Español</a>
 </p>
 
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 # 🧩 Involves Stage Docs · Monorepo
 
 Dépôt unifié contenant :
@@ -141,7 +143,7 @@ git push origin feature/ma-fonctionnalite
 
 ## 📄 Licence
 
-[Ajoutez ici le type de licence, ex : MIT]
+Ce projet est sous licence [MIT](./LICENSE).
 
 ---
 
