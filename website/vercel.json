@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/docs",
+      "destination": "https://involves-stage-docs-docs.vercel.app"
+    },
+    {
+      "source": "/docs/:match*",
+      "destination": "https://involves-stage-docs-docs.vercel.app/:match*"
+    }
+  ]
+}
