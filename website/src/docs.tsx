@@ -1,9 +1,6 @@
-import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 export default function DocsRedirect() {
-  const router = useRouter()
-
   useEffect(() => {
     const lang = navigator.language.startsWith('es')
       ? 'es'
@@ -11,10 +8,9 @@ export default function DocsRedirect() {
       ? 'fr'
       : navigator.language.startsWith('en')
       ? 'en'
-      : 'pt' // fallback
+      : 'pt'
 
-    const target = `https://involves-stage-docs-docs.vercel.app/docs/${lang}/intro`
-    window.location.replace(target)
+    window.location.replace(`https://involves-stage-docs-docs.vercel.app/docs/${lang}/intro`)
   }, [])
 
   return null
