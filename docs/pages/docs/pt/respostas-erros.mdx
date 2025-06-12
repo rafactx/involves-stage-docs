@@ -2,91 +2,91 @@
 title: Respostas & Erros
 ---
 
-import { Callout } from &apos;zudoku/ui/Callout&apos;;
-import { Card, CardContent, CardHeader, CardTitle } from &apos;zudoku/ui/Card&apos;;
-import { Button } from &apos;zudoku/ui/Button&apos;;
-import { AspectRatio } from &apos;zudoku/ui/AspectRatio&apos;;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from &apos;zudoku/ui/Tabs&apos;;
-import { Badge } from &apos;zudoku/ui/Badge&apos;;
+import { Callout } from 'zudoku/ui/Callout';
+import { Card, CardContent, CardHeader, CardTitle } from 'zudoku/ui/Card';
+import { Button } from 'zudoku/ui/Button';
+import { AspectRatio } from 'zudoku/ui/AspectRatio';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from 'zudoku/ui/Tabs';
+import { Badge } from 'zudoku/ui/Badge';
 
 ## 📜 Respostas HTTP
 
-<p className="text-muted-foreground mb-6"&gt;
+<p className="text-muted-foreground mb-6">
   A API retorna sempre um status HTTP e, geralmente, um objeto JSON com detalhes específicos.
-</p&gt;
+</p>
 
-<Card className="bg-[#f9f9fb] dark:bg-[#1e1e1e] border border-[#d4d4d8] dark:border-[#3a3a3c] rounded-xl overflow-hidden"&gt;
-  <CardHeader className="bg-[#e4e4e7] dark:bg-[#2c2c2e] border-b border-[#d4d4d8] dark:border-[#3a3a3c] py-3"&gt;
-    <div className="flex items-center gap-2"&gt;
-      <div className="flex gap-1.5"&gt;
-        <div className="w-3 h-3 rounded-full bg-red-500" /&gt;
-        <div className="w-3 h-3 rounded-full bg-yellow-500" /&gt;
-        <div className="w-3 h-3 rounded-full bg-green-500" /&gt;
-      </div&gt;
-      <span className="text-xs text-[#4b5563] dark:text-gray-400 font-mono ml-2"&gt;
+<Card className="bg-[#f9f9fb] dark:bg-[#1e1e1e] border border-[#d4d4d8] dark:border-[#3a3a3c] rounded-xl overflow-hidden">
+  <CardHeader className="bg-[#e4e4e7] dark:bg-[#2c2c2e] border-b border-[#d4d4d8] dark:border-[#3a3a3c] py-3">
+    <div className="flex items-center gap-2">
+      <div className="flex gap-1.5">
+        <div className="w-3 h-3 rounded-full bg-red-500" />
+        <div className="w-3 h-3 rounded-full bg-yellow-500" />
+        <div className="w-3 h-3 rounded-full bg-green-500" />
+      </div>
+      <span className="text-xs text-[#4b5563] dark:text-gray-400 font-mono ml-2">
         response.status
-      </span&gt;
-    </div&gt;
-  </CardHeader&gt;
-  <CardContent className="p-0 font-mono text-sm text-[#111827] dark:text-slate-300"&gt;
-    <div className="divide-y divide-[#d4d4d8] dark:divide-[#3a3a3c]"&gt;
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-green-600 dark:text-green-400 font-bold min-w-[60px]"&gt;200</span&gt;
-        <span className="min-w-[180px]"&gt;OK</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Requisição bem-sucedida</span&gt;
-      </div&gt;
+      </span>
+    </div>
+  </CardHeader>
+  <CardContent className="p-0 font-mono text-sm text-[#111827] dark:text-slate-300">
+    <div className="divide-y divide-[#d4d4d8] dark:divide-[#3a3a3c]">
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-green-600 dark:text-green-400 font-bold min-w-[60px]">200</span>
+        <span className="min-w-[180px]">OK</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Requisição bem-sucedida</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;400</span&gt;
-        <span className="min-w-[180px]"&gt;Bad Request</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Erro na requisição (verifique formato e parâmetros)</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">400</span>
+        <span className="min-w-[180px]">Bad Request</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Erro na requisição (verifique formato e parâmetros)</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;401</span&gt;
-        <span className="min-w-[180px]"&gt;Unauthorized</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Erro de autenticação</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">401</span>
+        <span className="min-w-[180px]">Unauthorized</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Erro de autenticação</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;403</span&gt;
-        <span className="min-w-[180px]"&gt;Forbidden</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Permissões insuficientes</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">403</span>
+        <span className="min-w-[180px]">Forbidden</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Permissões insuficientes</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;404</span&gt;
-        <span className="min-w-[180px]"&gt;Not Found</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Recurso ou URL inexistente</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">404</span>
+        <span className="min-w-[180px]">Not Found</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Recurso ou URL inexistente</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;406</span&gt;
-        <span className="min-w-[180px]"&gt;Not Acceptable</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Versão do endpoint inválida ou cabeçalho incorreto</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">406</span>
+        <span className="min-w-[180px]">Not Acceptable</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Versão do endpoint inválida ou cabeçalho incorreto</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]"&gt;412</span&gt;
-        <span className="min-w-[180px]"&gt;Precondition Failed</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Cabeçalhos obrigatórios ausentes ou incorretos</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-yellow-600 dark:text-yellow-400 font-bold min-w-[60px]">412</span>
+        <span className="min-w-[180px]">Precondition Failed</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Cabeçalhos obrigatórios ausentes ou incorretos</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors"&gt;
-        <span className="text-red-600 dark:text-red-400 font-bold min-w-[60px]"&gt;500</span&gt;
-        <span className="min-w-[180px]"&gt;Internal Server Error</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-500"&gt;Erro interno no servidor (entre em contato com suporte técnico)</span&gt;
-      </div&gt;
-    </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors">
+        <span className="text-red-600 dark:text-red-400 font-bold min-w-[60px]">500</span>
+        <span className="min-w-[180px]">Internal Server Error</span>
+        <span className="text-[#4b5563] dark:text-slate-500">Erro interno no servidor (entre em contato com suporte técnico)</span>
+      </div>
+    </div>
 
-    <div className="px-6 py-3 bg-[#e4e4e7] dark:bg-[#2c2c2e] border-t border-[#d4d4d8] dark:border-[#3a3a3c]"&gt;
-      <span className="text-xs text-[#4b5563] dark:text-gray-400"&gt;
-        $ curl -I <span&gt;https://api.involves.com/v3/endpoint</span&gt; | grep HTTP
-      </span&gt;
-    </div&gt;
+    <div className="px-6 py-3 bg-[#e4e4e7] dark:bg-[#2c2c2e] border-t border-[#d4d4d8] dark:border-[#3a3a3c]">
+      <span className="text-xs text-[#4b5563] dark:text-gray-400">
+        $ curl -I <span>https://api.involves.com/v3/endpoint</span> | grep HTTP
+      </span>
+    </div>
 
-</CardContent&gt;
-</Card&gt;
+</CardContent>
+</Card>
 
 ---
 

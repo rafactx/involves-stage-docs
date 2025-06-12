@@ -2,9 +2,9 @@
 title: Limites e boas práticas
 ---
 
-import { Card, CardContent, CardHeader } from &apos;zudoku/ui/Card&apos;;
-import { Badge } from &apos;zudoku/ui/Badge&apos;;
-import { Button } from &apos;zudoku/ui/Button&apos;;
+import { Card, CardContent, CardHeader } from 'zudoku/ui/Card';
+import { Badge } from 'zudoku/ui/Badge';
+import { Button } from 'zudoku/ui/Button';
 
 ## 🚦 Limites e boas práticas
 
@@ -22,64 +22,64 @@ Para garantir estabilidade e performance, recomendamos as seguintes práticas:
 
 ## 💰 Cobrança
 
-Atualmente, a API é totalmente gratuita. <br /&gt;
+Atualmente, a API é totalmente gratuita. <br />
 Caso isso mude futuramente, você será informado com antecedência.
 
 ---
 
 ## ⚙️ Métodos HTTP usados
 
-<p className="text-muted-foreground mb-6"&gt;
+<p className="text-muted-foreground mb-6">
   A API segue os métodos HTTP padrão para indicar o tipo de operação desejada:
-</p&gt;
+</p>
 
-<Card className="bg-[#f9f9fb] dark:bg-[#1e1e1e] border border-[#d4d4d8] dark:border-[#3a3a3c] rounded-xl overflow-hidden"&gt;
-  <CardHeader className="bg-[#e4e4e7] dark:bg-[#2c2c2e] border-b border-[#d4d4d8] dark:border-[#3a3a3c] py-3"&gt;
-    <div className="flex items-center gap-2"&gt;
-      <div className="flex gap-1.5"&gt;
-        <div className="w-3 h-3 rounded-full bg-red-500" /&gt;
-        <div className="w-3 h-3 rounded-full bg-yellow-500" /&gt;
-        <div className="w-3 h-3 rounded-full bg-green-500" /&gt;
-      </div&gt;
-      <span className="text-xs text-[#4b5563] dark:text-gray-400 font-mono ml-2"&gt;
+<Card className="bg-[#f9f9fb] dark:bg-[#1e1e1e] border border-[#d4d4d8] dark:border-[#3a3a3c] rounded-xl overflow-hidden">
+  <CardHeader className="bg-[#e4e4e7] dark:bg-[#2c2c2e] border-b border-[#d4d4d8] dark:border-[#3a3a3c] py-3">
+    <div className="flex items-center gap-2">
+      <div className="flex gap-1.5">
+        <div className="w-3 h-3 rounded-full bg-red-500" />
+        <div className="w-3 h-3 rounded-full bg-yellow-500" />
+        <div className="w-3 h-3 rounded-full bg-green-500" />
+      </div>
+      <span className="text-xs text-[#4b5563] dark:text-gray-400 font-mono ml-2">
         request.method
-      </span&gt;
-    </div&gt;
-  </CardHeader&gt;
+      </span>
+    </div>
+  </CardHeader>
 
-  <CardContent className="p-0 font-mono text-sm text-[#111827] dark:text-slate-300"&gt;
-    <div className="divide-y divide-[#d4d4d8] dark:divide-[#3a3a3c]"&gt;
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center"&gt;
-        <span className="font-bold text-green-600 dark:text-green-400 min-w-[80px]"&gt;GET</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-400"&gt;Consultar dados</span&gt;
-      </div&gt;
+  <CardContent className="p-0 font-mono text-sm text-[#111827] dark:text-slate-300">
+    <div className="divide-y divide-[#d4d4d8] dark:divide-[#3a3a3c]">
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center">
+        <span className="font-bold text-green-600 dark:text-green-400 min-w-[80px]">GET</span>
+        <span className="text-[#4b5563] dark:text-slate-400">Consultar dados</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center"&gt;
-        <span className="font-bold text-blue-600 dark:text-blue-400 min-w-[80px]"&gt;POST</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-400"&gt;Criar novos dados ou executar ações</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center">
+        <span className="font-bold text-blue-600 dark:text-blue-400 min-w-[80px]">POST</span>
+        <span className="text-[#4b5563] dark:text-slate-400">Criar novos dados ou executar ações</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center"&gt;
-        <span className="font-bold text-yellow-600 dark:text-yellow-400 min-w-[80px]"&gt;PUT</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-400"&gt;Atualizar integralmente dados existentes</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center">
+        <span className="font-bold text-yellow-600 dark:text-yellow-400 min-w-[80px]">PUT</span>
+        <span className="text-[#4b5563] dark:text-slate-400">Atualizar integralmente dados existentes</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center"&gt;
-        <span className="font-bold text-orange-600 dark:text-orange-400 min-w-[80px]"&gt;PATCH</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-400"&gt;Atualizar parcialmente dados existentes</span&gt;
-      </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center">
+        <span className="font-bold text-orange-600 dark:text-orange-400 min-w-[80px]">PATCH</span>
+        <span className="text-[#4b5563] dark:text-slate-400">Atualizar parcialmente dados existentes</span>
+      </div>
 
-      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center"&gt;
-        <span className="font-bold text-red-600 dark:text-red-400 min-w-[80px]"&gt;DELETE</span&gt;
-        <span className="text-[#4b5563] dark:text-slate-400"&gt;Excluir dados existentes</span&gt;
-      </div&gt;
-    </div&gt;
+      <div className="flex gap-4 px-6 py-3 hover:bg-[#f4f4f5] dark:hover:bg-slate-800/50 transition-colors items-center">
+        <span className="font-bold text-red-600 dark:text-red-400 min-w-[80px]">DELETE</span>
+        <span className="text-[#4b5563] dark:text-slate-400">Excluir dados existentes</span>
+      </div>
+    </div>
 
-</CardContent&gt;
+</CardContent>
 
-  <div className="px-6 py-3 bg-[#e4e4e7] dark:bg-[#2c2c2e] border-t border-[#d4d4d8] dark:border-[#3a3a3c]"&gt;
-    <span className="text-xs text-[#4b5563] dark:text-gray-400"&gt;
-      Referência: <a href="https://datatracker.ietf.org/doc/html/rfc7231" target="_blank" rel="noopener" className="underline text-blue-600 dark:text-blue-400"&gt;RFC 7231 - HTTP/1.1 Semantics and Content</a&gt;
-    </span&gt;
-  </div&gt;
-</Card&gt;
+  <div className="px-6 py-3 bg-[#e4e4e7] dark:bg-[#2c2c2e] border-t border-[#d4d4d8] dark:border-[#3a3a3c]">
+    <span className="text-xs text-[#4b5563] dark:text-gray-400">
+      Referência: <a href="https://datatracker.ietf.org/doc/html/rfc7231" target="_blank" rel="noopener" className="underline text-blue-600 dark:text-blue-400">RFC 7231 - HTTP/1.1 Semantics and Content</a>
+    </span>
+  </div>
+</Card>

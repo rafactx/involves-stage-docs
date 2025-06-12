@@ -155,7 +155,7 @@ git push origin feature/your-feature
 
 ## 📄 License
 
-[Add your license type here, e.g. MIT]
+This project is licensed under the [MIT License](./LICENSE).
 
 ---
 
