@@ -1,26 +1,25 @@
 import type { ZudokuConfig } from 'zudoku';
 import { LanguageSelector } from './config/LanguageSelector';
 import redirects from './config/redirects';
-import { generateSidebarForLanguage } from './config/sidebar';
 import { darkTheme, lightTheme } from './config/theme';
 
-// Main Zudoku configuration
 const config: ZudokuConfig = {
-  // Theme tokens
   theme: {
     light: lightTheme,
     dark: darkTheme,
   },
 
-  // Page-level settings: logo and footer
   page: {
     logo: {
-      src: { light: '/logo-involves-dark.png', dark: '/logo-involves-light.png' },
+      src: {
+        light: '/logo-involves-dark.png',
+        dark: '/logo-involves-light.png',
+      },
       alt: 'Involves Stage',
       width: '150px',
     },
     footer: {
-      position: 'center', // Horizontal alignment: start | center | end
+      position: 'center',
       columns: [
         {
           title: 'Produto',
@@ -49,7 +48,10 @@ const config: ZudokuConfig = {
         { icon: 'youtube', href: 'https://youtube.com/@InvolvesOficial' },
       ],
       logo: {
-        src: { light: '/logo-involves-dark.png', dark: '/logo-involves-light.png' },
+        src: {
+          light: '/logo-involves-dark.png',
+          dark: '/logo-involves-light.png',
+        },
         alt: 'Logo da Involves',
         width: '100px',
       },
@@ -57,38 +59,52 @@ const config: ZudokuConfig = {
     },
   },
 
-  // Inject custom slot after main nav
   slots: {
     'head-navigation-end': () => <LanguageSelector />,
   },
 
-  topNavigation: [
-    { id: 'docs', label: 'Documentação' },
-    { id: 'api', label: 'API Reference' },
+  navigation: [
+    {
+      type: 'category',
+      label: 'Visão Geral (PT)',
+      icon: 'book',
+      items: [
+        { type: 'doc', file: 'docs/pt/intro', label: 'Introdução' },
+        { type: 'doc', file: 'docs/pt/auth-ambiente' },
+        { type: 'doc', file: 'docs/pt/boas-praticas' },
+        { type: 'doc', file: 'docs/pt/exemplos-api-aux' },
+        { type: 'doc', file: 'docs/pt/navegacao-dados' },
+        { type: 'doc', file: 'docs/pt/respostas-erros' },
+      ],
+    },
+    {
+      type: 'link',
+      label: 'API Reference',
+      to: '/api',
+      icon: 'code',
+    },
   ],
 
-  sidebar: {
-    docs: generateSidebarForLanguage('pt'),
-  },
-
-  // URL redirects
   redirects,
 
-  // API reference settings
   apis: {
     type: 'file',
-    input: './apis/openapi.yaml',
-    navigationId: 'api',
+    input: './apis/openapi-pt-br.json',
+    path: '/api',
+    options: {
+      examplesLanguage: 'bash',
+      disablePlayground: false,
+      disableSidecar: false,
+      showVersionSelect: 'if-available',
+      expandAllTags: false,
+    },
   },
 
-  // Documentation sources
   docs: {
     files: '/pages/**/*.{md,mdx}',
   },
 
-  // Plugin hooks
   plugins: [],
 };
-console.log('SIDEBAR DEBUG:', generateSidebarForLanguage('pt'));
 
 export default config;
