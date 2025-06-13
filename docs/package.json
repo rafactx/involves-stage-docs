@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "translate:openapi": "node --loader ts-node/esm config/translate-openapi.mts",
     "dev": "zudoku dev",
     "build": "zudoku build",
     "preview": "zudoku preview",
@@ -11,11 +12,14 @@
   },
   "dependencies": {
     "framer-motion": "^12.17.0",
+    "fs-extra": "^11.3.0",
+    "glob": "^11.0.2",
     "lucide-react": "^0.514.0",
     "next": "^15.3.3",
     "react": ">=19.0.0",
     "react-dom": ">=19.0.0",
-    "zudoku": "^0.47.1"
+    "yaml": "^2.8.0",
+    "zudoku": "^0.48.1"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -25,8 +29,11 @@
     "@typescript-eslint/parser": "^8",
     "autoprefixer": "^10.4.21",
     "eslint": "^8",
+    "js-yaml": "^4.1.0",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "vite": "^6.3.5"
   }
 }
