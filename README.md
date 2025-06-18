@@ -1,24 +1,4 @@
-<p align="right">
-  🇧🇷 <a href="./README.pt.md">Português</a> •
-  🇪🇸 <a href="./README.es.md">Español</a> •
-  🇫🇷 <a href="./README.fr.md">Français</a>
-</p>
-
-<p align="left">
-  <!-- Linguagem principal -->
-  <img src="https://img.shields.io/badge/lang-TypeScript-blue?style=flat" alt="Linguagem: TypeScript" />
-
-  <!-- Licença -->
-  <img src="https://img.shields.io/github/license/rafactx/involves-stage-docs?color=blue&style=flat" alt="Licença MIT" />
-
-  <!-- Deploy na Vercel -->
-  <a href="https://involves-stage-docs.vercel.app">
-    <img src="https://img.shields.io/badge/deploy-Vercel-black?logo=vercel&style=flat" alt="Deploy: Vercel" />
-  </a>
-</p>
-
-
-# 🧩 Involves Stage Docs · Monorepo
+# 🧩 Involves Stage Docs · Monorepo - deprecated
 
 Unified repository containing:
 
